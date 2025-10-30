@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <link href="dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 text-black leading-normal">
+    <div class="container flex min-h-screen">
+        <!-- Side bar-->
+        <aside class="sidebar w-[220px] bg-white border-r border-gray-300 fixed left-0 h-screen z-50 flex flex-col">
+            <div class="sidebar-header px-4 py-4 border-b border-gray-300">
+                <div class="logo text-xl font-bold mb-4">Buy More</div>
+                <div class="stats-card bg-[#faf8fc] p-4 rounded-[12px] text-center">
+                    <div class="stats-number text-2xl font-bold text-black leading-normal">42</div>
+                    <div class="statslabel text-gray-600 text-sm">Orders Last 7 days</div>
+                </div>
+            </div>
+            <div class="sidebar-content flex-1 overflow-y-auto">
+                <button
+                    class="explore-btn py-2 px-2 text-xs mx-6 mb-3 mt-4 bg-[#3b82f6] text-white rounded-[10px] font-semibold transition-colors duration-300 ease-in-out hover:bg-[#2563eb]">
+                    <i class="fas fa-compass pr-1"></i>Explore New
+                </button>
+                <div class="nav-group">
+                    <a href="#" class="nav-item active bg-[#eff6ff] text-[#3b82f6] border-r-2 border-[#3b82f6] p-1">
+                        <i class="fas fa-fire text-lg"></i> Popular Products
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-tshirt text-lg"></i> Clothing & Shoes
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-gift text-lg"></i> Gifts & Living
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-lightbulb text-lg"></i> Inspiration
+                    </a>
+                </div>
+            </div>
+
+            <!-- side bar footer-->
+            <div class="sidebar-footer">
+                <div class="recent-orders">
+                    <h4 class="font-bold">Recent Orders</h4>
+                    <div class="order-item">
+                        <div class="order-dot"></div>
+                        <span>Sneakers</span>
+                    </div>
+                    <div class="order-item">
+                        <div class="order-dot"></div>
+                        <span>Hoodie</span>
+                    </div>
+                    <a href="#" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Log out
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <div class="header">
+                <div>
+                    <h1 class="page-title text-2xl font-bold mb-2">Explore</h1>
+                </div>
+
+                <!-- Right side-->
+                <div class="header-actions">
+                    <button class="cart-btn" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge" id="cart-badge">0</span>
+                    </button>
+
+                    <div class="user-profile">P</div>
+                </div>
+            </div>
+
+            <!-- Content layout-->
+            <div class="content-layout">
+                <div class="main-section">
+                    <div class="promo-banner">
+                        <div class="promo-content">
+                            <h2>Get Up to 50% Off</h2>
+                            <p class="mb-[1rem] opacity-[0.8]">Special discount on selected items</p>
+                            <button class="promo-btn" id="promo-btn">Get discount</button>
+                        </div>
+                    </div>
+
+                    <div class="secondary-banner">
+                        <h3>Winter's Weekend</h3>
+                        <p>Keep it casual with our cozy collection</p>
+                    </div>
+                </div>
+
+                <div class="hidden" id="featured-products">
+                </div>
+
+                <div class="products-grid" id="products-grid">
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Check out modal -->
+    <div class="checkout-overlay" id="checkout-overlay">
+        <div class="checkout-container">
+            <div class="checkout-header">
+                <h2 class="checkout-title">Shopping Cart</h2>
+                <button class="close-btn" id="close-btn">&times;</button>
+            </div>
+            <div class="checkout-content" id="checkout-content">
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart text-[3rem] text-gray-300 mb-4"></i>
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+            <div class="checkout-footer flex flex-col items-center" id="checkout-footer">
+                <div class="total-amount" id="total-amount">Total: $0.00</div>
+                <button class="checkout-btn" id="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
